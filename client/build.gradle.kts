@@ -5,7 +5,6 @@ plugins {
     id("kotlin-android")
     id("kotlin-android-extensions")
     id("kotlin-kapt")
-    id("com.google.gms.google-services")
 }
 
 repositories {
@@ -17,7 +16,7 @@ android {
     compileSdkVersion(29)
     buildToolsVersion = "29.0.3"
     defaultConfig {
-        applicationId = "ru.memebattle"
+        applicationId = "ru.memebattle.memebattle"
         minSdkVersion(23)
         targetSdkVersion(29)
         versionCode = 1

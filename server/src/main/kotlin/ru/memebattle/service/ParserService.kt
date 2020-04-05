@@ -25,7 +25,7 @@ class ParserService(
             while (true) {
                 memeRepository.removeAll()
                 val client = HttpClient(Apache)
-                val groupIds = listOf("183566984","120891224", "155464693", "154906069")
+                val groupIds = listOf("150550417","120254617", "150387303", "154306815")
                 groupIds.forEach { groupId ->
                     val response =
                         client.get<String>("https://api.vk.com/method/wall.get?owner_id=-$groupId&access_token=e0cd519e93ed63e1947c49cc09f89c60b4b6f3ba38f188eb726ce6e7b9b1c2e5c247821664052fb1c13aa&v=5.103")
@@ -37,7 +37,7 @@ class ParserService(
                         url?.let { memeRepository.save(MemeModel(url = url)) }
                     }
                 }
-                delay(60000 * 5)
+                delay(60000 * 15)
             }
         }
     }
